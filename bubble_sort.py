@@ -2,9 +2,7 @@
 
 
 def bubble_sort(data):
-
     sorted = False
-
     while not sorted:
         sorted = True
         for i in range(0,len(data)-1):
@@ -13,6 +11,13 @@ def bubble_sort(data):
                 data[i+1],data[i] = data[i],data[i+1]
     return data
 
+def bubble_sort_2(data):
+    for i,e in enumerate(data):
+        for j,k in enumerate(data):
+            if i == j: continue
+            if data[j] > data[i]:
+                data[j],data[i]=data[i],data[j]
+    return data
 
 print bubble_sort([3,4,1])
 print bubble_sort([5,9,1,0])
